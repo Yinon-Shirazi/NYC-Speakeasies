@@ -1,0 +1,313 @@
+.addHeader{
+    padding-top:20px;
+    font-size: 1.2cm;
+    text-align: center;
+}
+
+.lightG{
+    background-color:rgb(240, 235, 235);
+}
+
+.fade_barName{
+    color:rgb(172, 171, 171);
+}
+
+.darkG{
+    color:grey;
+}
+
+.red{
+    color:rgb(189, 55, 7);
+}
+
+a{
+    color:rgb(189, 55, 7);
+}
+
+a:hover{
+    color:rgb(189, 55, 7);
+}
+
+a::after{
+    content: alt="test";
+}
+
+.test:focus{
+    border-color: rgb(189, 55, 7) ;
+    outline: 2px solid orange;
+}
+
+.form-control:focus {
+    border-color: rgb(189, 55, 7);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.btn:hover{
+    background-color: rgb(104, 30, 3);
+}
+
+.btn:focus{
+    background-color: rgb(104, 30, 3);
+}
+
+
+.mainC{
+    color: rgb(247, 215, 156);
+}
+
+.reg{
+    color:black;
+}
+
+.navBG{
+    background-color: rgb(247, 215, 156);
+}
+
+.upperRight{
+    background-color: rgb(247, 215, 156);
+    padding:10px;
+    border-radius: 4%;
+}
+
+.buttn{
+    background-color: rgb(189, 55, 7);
+    border-color: rgb(189, 55, 7);
+    border-radius: 20%;
+    color:white;
+}
+
+.buttn:focus{
+    background-color:rgb(189, 55, 7);
+    color:white;
+}
+
+.bgGrey{
+    background-color: grey;
+}
+
+.navTitle{
+    color:black;
+    font-size: larger;
+}
+
+#hello_div{
+    padding-top:  10px;
+    padding-bottom:  10px;
+    color: blue;
+}
+
+.pic{
+    width: 100%;
+    height:100%;
+}
+
+.h1{
+    text-align: center;
+    padding: 20px;
+}
+.h5{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.featured{
+    font-size:1cm;
+    margin-top: 10px;
+    padding: 8px;
+    text-align:center;
+    color: black;
+}
+
+.homeImg{
+    border-radius: 8%;
+    width : 100%;
+}
+
+.cardsRow{
+    margin-top: 10px;
+    padding-top: 30px;
+    position: relative;
+    padding-bottom:20px;
+}
+
+
+
+.card{
+    border-radius: 10%;
+    border-top: 10%;
+}
+
+.card-text{
+    color: rgb(90, 90, 90);
+}
+
+.card-title{
+    color: rgb(90, 90, 90);
+}
+
+.stat{
+    position: static;
+}
+
+
+
+.searchHood{
+    display: none;
+}
+.searchName{
+    display: none;
+}
+.searchDrink{
+    display: none;
+}
+.results{
+    font-weight: bolder;
+    font-size: large;
+}
+
+.add{
+    color: black;
+    padding-top: 9px;
+    font-size: large;
+    width: 50%;
+    display: inline-block;
+}
+
+.addnav{
+    color: black;
+    padding-top: 9px;
+    font-size: large;
+}
+
+.titleAndAdd{
+    align-content: left;
+    display:inline-flex;
+}
+
+.inputs{
+    padding-left: 40px;
+    padding-bottom: 40px;
+    font-size: larger;
+}
+
+.warnings{
+    color: red;
+    font-size: small;
+}
+
+.instruction{
+    padding-right: 5px;
+}
+
+.edit_btn{
+    margin-left: 150px;
+    margin-bottom: 100px;
+    padding: 10px;
+    font-size: larger;
+}
+
+.success_msg{
+    font-size: larger;
+    padding: 5px;
+}
+
+.check{
+    padding-right: 10px;
+    color: green;
+}
+
+.view{
+    margin-left: 70px;
+}
+
+.title{
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+.rating{
+    margin-left: 20px;
+    padding: 10px;
+    font-size: larger;
+    font-weight: bolder;
+}
+.avg_price{
+    margin-left: 40px;
+    padding: 10px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.miniHeader{
+    color: gray;
+    font-weight:normal;
+}
+
+.about{
+    padding-top: 5px;
+}
+
+.group3{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.drink{
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.seating{
+    font-size: large;
+}
+
+.edit{
+    color: grey;
+    margin-top:30px;
+}
+
+.dialog{
+    font-size: 100%;
+}
+
+.del{
+    color :white;
+}
+
+.del:focus{
+    background-color:rgb(107, 32, 5);
+}
+
+.cancelBtn{
+    margin-left: 10px;
+    background-color: lightgrey;
+    color: black;
+}
+
+.send{
+    margin-left:250px;
+    padding:15px;
+    font-size: x-large;
+}
+
+.number_results{
+    padding: 15px;
+    font-size: x-large;
+}
+
+.horizontal{
+    background-color: rgb(247, 215, 156);
+    height: 1px;
+}
+
+.stretched-link::after{
+    z-index: 0;
+    content: attr("alt = 'Card'");
+    content: "" / "This week's featured bars card";
+}
+
+.summary{
+    margin-top: 2px;
+}

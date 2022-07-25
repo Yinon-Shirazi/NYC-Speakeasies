@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+    let data = {{data|tojson}}
+</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+
+<div class = "container">
+
+    <div class = "row h1">
+        <div class = "col-md-2"></div>
+        <div class = "col-md-8">
+            <h2 class = "h1">New York's Hidden Speakeasies</h2>
+        </div>
+        <div class = "col-md-2"></div>
+
+    </div>
+    <div class = "row">
+        <div class = "col-md-4">
+            <img src= 'https://www.reviewjournal.com/wp-content/uploads/2019/07/12445898_web1_MOB-MUSEUM-SPEAKEASY-941418cs_003.jpg?crop=1' alt='Seceret entrance'class = "homeImg" >
+        </div>
+        <div class = "col-md-8">
+            <div class = "upperRight summary">
+                <ul>
+                <div class = "h5 red">
+                    <li><span class = "reg">New York's secrets at you fingertips!</span></li>
+                </div>
+                <div class = "h5 red">
+                    <li><span class = "reg">Find the best speakeasies in the Big Apple to make for an unforgettable night out</span></li>
+                </div>
+                <div class = "h5 red">
+                    <li><span class = "reg">Get specific info about each bar to help you make the best decision.</span></li>
+                </div>
+                <div class = "h5 red">
+                    <li><span class = "reg">Feel free to add/update any special places that you know about!</span></li>
+                </div></ul>
+            </div>
+        </div>
+    </div>
+    <div class = "row featured"> Featured Speakeasies:</div>
+    <div class = "row cardsRow ">
+        <div class = "col-md-4">
+            <div id = "card1" class="card stat" >
+            </div>
+        </div>
+        <div class = "col-md-4">
+            <div id = "card2" class="card stat" >
+              </div>
+        </div>
+        <div class = "col-md-4">
+            <div id = "card3" class="card stat" >
+              </div>
+        </div>
+    </div>
+    
+    
+    <div>
+        <ul id = "popular">
+        </ul>
+    </div>
+
+</div>
+
+
+{% endblock %}

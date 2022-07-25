@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+    data = {{data|tojson}}
+    idx = {{idx|tojson}}
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'edit.js') }}"></script>
+
+
+<div class = "container">
+    <div class = "row addHeader ">
+        <div class = "col-md-4"></div>
+        <div class = "col-md-4">Edit Speakeasy</div>
+        <div class = "col-md-4"></div>
+        
+    </div>
+    <div class = "row inputs">
+        <div id = "success" class = success_msg></div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction"> Name:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "nameWarning" class = "warnings"></div>
+            <input id ="name" class = "form-control add"> 
+            <span class='edit'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+              </svg></span>
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Image Link:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "imageWarning" class = "warnings"></div>
+            <input id ="image" size = "50" class = "form-control add" readonly>
+        </div>
+    </div>
+    <br><br>
+    <hr class = "hr.solid horizontal">
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Rating: (scale of 0-5)</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "ratingWarning" class = "warnings"></div>
+            <input id ="rating" size = "30" class = "form-control add">
+            <span class='edit'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+              </svg></span>
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Average Drink Price:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "priceWarning" class = "warnings"></div>
+            <input id ="price" size = "30" class = "form-control add">
+            <span class='edit'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+              </svg></span>
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">About:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "aboutWarning" class = "warnings"></div>
+            <textarea id ="about" rows="6" cols="50" class = "form-control add"></textarea>
+            <span class='edit'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+              </svg></span>
+        </div>
+    </div>
+    <hr class = "hr.solid horizontal">
+    <br><br>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Popular Drinks: (seperate by commas) </div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "drinksWarning" class = "warnings"></div>
+            <input id ="popular_drinks" size = "30" class = "form-control add">
+            <span class='edit'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+              </svg></span>
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Neighborhood:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "hoodWarning" class = "warnings"></div>
+            <input id ="neighborhood" size = "30" class = "form-control add" readonly>
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Seating Configuration: (seperate by commas) </div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "seatingWarning" class = "warnings"></div>
+            <input id ="seating_config" size = "30" class = "form-control add">
+            <span class='edit'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+              </svg></span>
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Address:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "addressWarning" class = "warnings"></div>
+            <input id ="address" size="40" class = "form-control add" readonly>
+        </div>
+    </div>
+    <div class="row inputs">
+    <br>
+        <button id = "send" class = "btn edit_btn buttn"> Submit</button>
+        <button id = "discard" class = "btn edit_btn buttn del"> Discard Changes</button>
+    </div>
+    <div id="dialog" title="Are you sure?" class = "dialog buttn"s>
+        <p>Discarded data cannot be recovred </p>
+        <button id = "delete" class = "btn buttn del"> Discard</button>
+        <button id = "cancel" class = "btn buttn cancelBtn"> Cancel </button>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
+

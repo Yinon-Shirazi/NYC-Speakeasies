@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+    data = {{data|tojson}}
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'add.js') }}"></script>
+
+
+
+<div class = "container">
+    <div class = "row addHeader ">
+        <div class = "col-md-4"></div>
+        <div class = "col-md-4">Add a Seceret</div>
+        <div class = "col-md-4"></div>
+        
+    </div>
+    <div class = "row inputs">
+        <div id = "success" class = success_msg></div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Name:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "nameWarning" class = "warnings"></div>
+            <input id ="name" placeholder="Name" class = "form-control add">
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Image Link:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "imageWarning" class = "warnings"></div>
+            <input id ="image" placeholder="Add image link" size = "50" class = "form-control add">
+        </div>
+    </div>
+    <hr class = "hr.solid horizontal">
+    <br> <br>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Rating: (scale of 0-5)</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "ratingWarning" class = "warnings"></div>
+            <input id ="rating" placeholder="Numbers only" size = "30" class = "form-control add">
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Average Drink Price:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "priceWarning" class = "warnings"></div>
+            <input id ="price" placeholder="Amount in USD" size = "30" class = "form-control add">
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">About:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "aboutWarning" class = "warnings"></div>
+            <textarea id ="about" placeholder="Tell us a little about this place" rows="6" cols="50" class = "form-control add"></textarea>
+        </div>
+    </div>
+    <hr class = "hr.solid horizontal">
+    <br> <br>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Popular Drinks: (seperate by commas) </div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "drinksWarning" class = "warnings"></div>
+            <input id ="popular_drinks" placeholder="Please enter at least 1 drink" size = "30" class = "form-control add">
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Neighborhood:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "hoodWarning" class = "warnings"></div>
+            <input id ="neighborhood" size = "30" placeholder="Neighborhood" class = "form-control add">
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Seating Configuration: (seperate by commas) </div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "seatingWarning" class = "warnings"></div>
+            <input id ="seating_config" placeholder="Bar-seating/Table-service etc." size = "30" class = "form-control add">
+        </div>
+    </div>
+    <div class = "row inputs">
+        <div class = "col-md-3">
+            <div class = "instruction">Address:</div>
+        </div>
+        <div class = "col-md-9">
+            <div id = "addressWarning" class = "warnings"></div>
+            <input id ="address" placeholder="Address" size="40" class = "form-control add">
+        </div>
+    </div>
+    <div class="row inputs">
+    <br>
+        <button id = "send" class = "btn buttn send"> Submit</button>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
+

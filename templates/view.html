@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+    let data = {{data|tojson}}
+    let idx = {{idx|tojson}}
+</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'view.js') }}"></script>
+
+<!--<div id = "placeHolder">
+</div>-->
+
+<div id = "all" class = "container">
+    <div class="row">
+        <div class = "col-md-10">
+            <div id = "name" class = "title"></div>
+        </div>
+        <div id = "edit" class = "col-md-2"> 
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-6">
+            <div id = "image"></div>
+        </div>
+        <div class = "col-md-6">
+            <div class = "upperRight">
+                <div class = "row group3">
+                    <div class = "col-md-3">
+                        <div class = "miniHeader"> Popular Drinks:</div>
+                    </div>
+                    <div class = "col-md-9">
+                        <div id = "popular_drinks"></div>
+                    </div>
+                </div>
+                <div class = "row group3">
+                    <div class = "col-md-3">
+                        <div class = "miniHeader"> Neighborhood</div>
+                    </div>
+                    <div class = "col-md-9">
+                        <div id = "neighborhood"></div>
+                    </div>
+                </div>
+                <div class = "row group3" >
+                    <div class = "col-md-3">
+                        <div class = "miniHeader"> Seating Configuration:</div>
+                    </div>
+                    <div class = "col-md-9">
+                        <div id = "seating_config" class = "seating"></div>
+                    </div>
+                </div>
+                <div class = "row group3">
+                    <div class = "col-md-3">
+                        <div class = "miniHeader"> Address</div>
+                    </div>
+                    <div class = "col-md-9">
+                        <div id = "address"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div id = "rating" class = "rating"></div>
+        <div id = "price" class = "avg_price"></div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-6">
+            <div id = "about" class = "about"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
